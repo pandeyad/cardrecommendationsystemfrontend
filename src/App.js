@@ -133,12 +133,13 @@ function App() {
                 <Box
                     ref={chatContainerRef}
                     sx={{
-                        flexGrow: 1,
-                        overflowY: "auto",
-                        p: 2,
+                        flexGrow: 1,  // Takes all available height
+                        overflowY: "auto",  // Makes it scrollable
+                        padding: "16px",
                         display: "flex",
                         flexDirection: "column",
-                        gap: 2,
+                        gap: "16px",
+                        maxHeight: "calc(100vh - 200px)", // Leaves space for input area
                     }}
                 >
                     <Stack spacing={2}>
